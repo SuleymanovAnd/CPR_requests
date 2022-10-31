@@ -14,7 +14,7 @@ int main() {
             std::cout << r.text << std::endl;
         }
        if (command == "post"){
-           r = cpr::Post(cpr::Url("http://httpbin.org/post"));
+           r = cpr::Post(cpr::Url("http://httpbin.org/post"),cpr::Payload({{"parameter","p1"}}));
            std::cout << r.text << std::endl;
        }
        if (command == "put"){
